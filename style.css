@@ -28,35 +28,164 @@ html { box-sizing: border-box; }
 	#303339		tmavé pozadí patičky
 */
 
-
-
-img {
-	display: block;
-	width: 100%;
-}
-
-section {
-	padding: 80px 0;
-}
+* {box-sizing: border-box; }
 
 body {
 	margin: 0;
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+section {
+    padding: 80px 0;
 }
 
 .obsah-sekce {
 	max-width: 1100px;
+    margin: 0 auto;
+}
+
+.hlavicka {
+	max-width: 1100px;
 	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.hlavicka img {
+	width: 170px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.menu li a {
+	text-decoration: none;
+  	color: black;
+  	font-size: 18px;
+  	padding: 10px 15px;
+  	background-color: transparent;
+  	/*transition: background-color 0.3s ease, color 0.3s ease;*/
+  	display: inline-block;
+}
+
+.menu li a:hover {
+	background-color: #d2567d;
+	border-radius: 20px;
+	color: white;
+}
+
+.hero {
+    margin: 0 auto;
+	background-image: url(images/cupcake.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.nadpis {
+	font-size: 52px;
+	color: white;
+	padding: 30px 0 30px 0;
+	margin: 0;
+}
+
+.nadpis-sekce {
+	font-size: 36px;
+	color: #3e606b;
+}
+
+.hero p {
+	font-size: 24px;
+	font-style: italic;
+	color: white;
+	width: 60%;
+	padding: 30px 0 30px 0;
+	margin: 0;
 }
 
 .dva-sloupce {
-	display: flex;
-	gap: 30px;
+    display: flex;
+    gap: 30px;
 }
 
 .sloupec {
-	flex: 0 0 50%;
+    flex: 0 0 50%;
 }
 
-.vitejte {
-	background-color: lightblue;
+.sloupec img {
+	border-radius: 5px;
 }
+
+.tlacitka {
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	margin-top: 30px;
+}
+
+.tlacitko {
+	width: 100px;
+	padding: 15px 40px;
+	border-radius: 30px;
+	background-color: #f195b2;
+	color: white;
+	text-decoration: none;
+	margin: 0;
+}
+
+a.tlacitko:hover {
+	background-color: #d2567d;
+}
+
+.Nabidka {
+	background-color: #f0f0f0;
+}
+
+.kontejner {					/*PROBLÉM: v sekci Nabídka vzniká vedle flexboxu mezera v pravé části obrazovky*/
+	display: flex;
+  	gap: 30px;					/*když zvýším gap na 35 - 50px, tak flexbox zůstane zachovaný, ale mezery se roztáhnou*/
+}
+
+.produkt {
+	flex: 0 0 252.5px;			/*flex: 0 0 calc((100% - 90px) / 4);*/
+}
+
+.produkt img {
+	width: 100%;
+  	height: auto;
+  	display: block;
+}
+
+.produkt-obsah {
+	background-color: white;
+	text-align: center;
+}
+
+.produkt-obsah h3 {
+	padding: 20px;
+	margin: 0;
+	color: #3e606b;
+	font-size: 18px;
+}
+
+.produkt-obsah p {
+	padding: 0 20px 20px 20px;
+	margin: 0;
+}
+
+.paticka {
+	background-color: #303339;
+	color: white;
+	text-align: center;
+	padding: 30px 0;
+}
+
